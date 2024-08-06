@@ -25,9 +25,9 @@ searchBtn.addEventListener("click", async function () {
                 <p>${
                   data[0].phonetic
                     ? data[0].phonetic
-                    : data[0].phonetics[0].text
-                    ? data[0].phonetics[0].text
-                    : data[0].phonetics[1].text
+                    : data[0].phonetics[0]?.text
+                    ? data[0].phonetics[0]?.text
+                    : data[0].phonetics[1]?.text
                 }</p>
             </div>
 
@@ -42,9 +42,9 @@ searchBtn.addEventListener("click", async function () {
           sound.setAttribute(
             "src",
             `${
-              data[0].phonetics[0].audio
-                ? data[0].phonetics[0].audio
-                : data[0].phonetics[1].audio
+              data[0].phonetics[0]?.audio
+                ? data[0].phonetics[0]?.audio
+                : data[0].phonetics[1]?.audio
             }`
           );
 
